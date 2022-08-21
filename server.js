@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-appuse(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true}));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:25017/social-network-api', {
     useNewURLParser: true,
